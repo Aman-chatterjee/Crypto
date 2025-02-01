@@ -52,12 +52,12 @@ python3 -m venv venv
 source venv/bin/activate
 ```
 
-3. **Install the dependencies:**
+3. ***Install the dependencies:***
 ```bash
 pip install -r requirements.txt
 ```
 
-Set up PostgreSQL:
+## Set up PostgreSQL:
 
 Make sure PostgreSQL is installed and running.
 
@@ -79,7 +79,7 @@ Ensure that your database is set up properly by running the migration commands:
 alembic upgrade head
 ```
 
-**Running the Application**
+## 4. Running the Application
 Once the setup is complete, you can run the FastAPI application using uvicorn.
 
 Run the FastAPI app:
@@ -89,7 +89,7 @@ uvicorn main:app --reload
 ```
 The application will run at http://127.0.0.1:8000. You can open this in your browser to access the API.
 
-3. **Authentication and Authorization**:
+## 5. **Authentication and Authorization**:
 
 **Signup: send a POST request to http://127.0.0.1:8000/auth/signup with the following JSON payload:**
 
@@ -101,7 +101,7 @@ The application will run at http://127.0.0.1:8000. You can open this in your bro
 }
 ```
 
-**Login: To obtain a JWT token, send a POST request to to http://127.0.0.1:8000/auth/signup with the following JSON payload:**
+**Login: To obtain a JWT token, send a POST request to to http://127.0.0.1:8000/auth/login with the following JSON payload:**
 
 ```
 {
@@ -113,7 +113,7 @@ The application will run at http://127.0.0.1:8000. You can open this in your bro
 
 Authorization: Bearer <your_jwt_token>
 
-**Now you can make the following get requests with the JWT token**:
+## Now you can make the following get requests with the JWT token:
 1. List all coins including coin id.
 2. List coin categories
 3. List specific coins according to id from listing endpoint and/or category from categories
